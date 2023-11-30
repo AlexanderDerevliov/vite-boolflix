@@ -6,8 +6,7 @@ export default{
 
         }
     }, 
-    
-    components: {AppMain}
+   
 
 }
 
