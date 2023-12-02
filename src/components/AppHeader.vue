@@ -1,6 +1,6 @@
 <script>
 
-import InputSearch from '../components/InputSearch.vue';
+import InputSearch from './components/InputSearch.vue';
 
 export default {
     

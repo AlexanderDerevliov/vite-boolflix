@@ -1,6 +1,6 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import AppMain from "./components/AppMain.vue"
+import AppMain from "./src/components/AppMain.vue";
 
 export default{
     data() {

@@ -5,4 +5,5 @@ export const store = reactive ({
     ApiKey: "096570577eb21eaeac1a4912f0810d8c",
     MovieList: [],
     SeriesList: [],
+    searchKey: "",
 })
