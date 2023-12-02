@@ -1,6 +1,6 @@
 <script>
-import AppHeader from "./components/AppHeader.vue";
-import AppMain from "./src/components/AppMain.vue";
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default{
     data() {
@@ -8,11 +8,11 @@ export default{
 
         }
     }, 
-
-    components: { AppMain, AppHeader }
+  components: { AppHeader, AppMain},
+    
    
 
-}
+};
 
 </script>
 
@@ -21,9 +21,10 @@ export default{
 <AppHeader />
 <AppMain />
 
+
 </template>
 
 <style lang="scss" >
-@use "./style/general.sass";
+
 @import "@fortawesome/fontawesome-free/css/all.css";
 </style>

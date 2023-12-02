@@ -1,17 +1,27 @@
 <script>
+
+import { store } from "./store";
 export default {
     data() {
-        return{
-            text: "Content Goes Here"
-                }
+        return {
+            store
+        }
     }
 }
 </script>
 
 <template>
+    <section>
+        <div v-for="movie in store.MovieList">
 
-    <h2>{{ text }}</h2>
+            <h2>{{ movie.title }}</h2>
+            <h3>{{ movie.original_title }}</h3>
+            <p>{{ movie.original_language }}</p>
+            <p>{{ movie.vote_average }}</p>
+
+        
+        </div>
+    </section>
 </template>
 
-<style>
-</style>
+<style></style>

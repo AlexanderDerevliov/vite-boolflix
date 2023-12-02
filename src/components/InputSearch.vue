@@ -1,12 +1,15 @@
 <script>
+import {store} from "../store";
 export default {
     data() {
         return {
+            store
          
         }
     },
+    emits: ["perform-search"]
   
-}
+};
 </script>
 
 <template>
@@ -14,8 +17,9 @@ export default {
     <div class="container_nav">
         
         <form >
-            <input type="text" placeholder="Cerca qui">
-            <button>Cerca</button>
+            <label for="search"></label>
+            <input type="text" id="search" placeholder="Cerca qui" v-model="store.searchKey">
+            <button @click="$emit('perform-search')">Cerca</button>
         </form>
     </div>
 </template>
