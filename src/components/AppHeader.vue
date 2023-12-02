@@ -1,32 +1,34 @@
 <script>
 
 import InputSearch from '../components/InputSearch.vue';
-import axios from 'axios';
-import {store} from "../store"
+import { store } from '../store';
+
 
 export default {
     data(){
         return {
-            store,
+           store,
         }
     },
     
     components: { InputSearch },
+
     methods: {
     search() {
-      axios.get("https://api.themoviedb.org/3/search/movie", {
+      axios.get("https://api.themoviedb.org/3", {
         params: {
-            api_key: "096570577eb21eaeac1a4912f0810d8c",
-            query: this.store.searchKey,
+          api_key: "096570577eb21eaeac1a4912f0810d8c",
+          query: this.store.searchKey,
 
         }
-        }) 
-        .then ((resp ) => {
-           this.store.MovieList = resp.data.results;
+      })
+        .then((resp) => {
+          this.store.MovieList = resp.data.results;
         });
     }
 
   }
+  
 }
 </script>
 

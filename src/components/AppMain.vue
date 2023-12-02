@@ -1,27 +1,33 @@
 <script>
+import { store } from '../store';
 
-import { store } from "./store";
+
+
 export default {
     data() {
         return {
-            store
-        }
-    }
+            text: "Non mi da nessuna risposta",
+            store,
+        };
+    },
+ 
 }
 </script>
 
 <template>
-    <section>
-        <div v-for="movie in store.MovieList">
+   <section>
+    <div v-for="movie in store.MovieList">
+        <h3>{{ movie.title }}</h3>
+    </div>
+    <h2>{{ text }}</h2>
+   </section>
 
-            <h2>{{ movie.title }}</h2>
-            <h3>{{ movie.original_title }}</h3>
-            <p>{{ movie.original_language }}</p>
-            <p>{{ movie.vote_average }}</p>
-
-        
-        </div>
-    </section>
+  
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+section {
+    background-color: aqua;
+    min-height: 200px;
+}
+</style>
