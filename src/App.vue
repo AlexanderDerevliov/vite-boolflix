@@ -17,10 +17,13 @@ export default{
 </script>
 
 <template>
+
 <AppHeader />
 <AppMain />
 
 </template>
 
-<style>
+<style lang="scss" >
+@use "./style/general.sass";
+@import "@fortawesome/fontawesome-free/css/all.css";
 </style>
